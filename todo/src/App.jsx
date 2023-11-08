@@ -64,7 +64,7 @@ function App() {
       id: crypto.randomUUID(),
       title: todoTitle,
       detail: todoDetail,
-      isDone: true,
+      isDone: false,
     };
     setTodoLis([...todoList, newCancelTodo]);
   };

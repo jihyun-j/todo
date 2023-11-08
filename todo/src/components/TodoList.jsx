@@ -6,9 +6,11 @@ function TodoList({ list, clickDelete, clickDoneCancel, children }) {
       <h2>{children}</h2>
       {list.map((todo) => {
         return (
-          <div key={todo.id}>
-            <p>{todo.title}</p>
-            <p>{todo.detail}</p>
+          <div
+            key={todo.id}
+            style={{ border: "1px solid black", margin: "10px" }}>
+            <p>할일: {todo.title}</p>
+            <p>내용: {todo.detail}</p>
             <button onClick={() => clickDoneCancel(todo.id)}>완료</button>
             <button onClick={() => clickDelete(todo.id)}>삭제</button>
           </div>
